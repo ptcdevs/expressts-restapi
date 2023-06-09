@@ -6,7 +6,7 @@ on:
 concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
-name: Create release pr
+name: Create/update release pr
 jobs:
   release-please:
     runs-on: ubuntu-latest
