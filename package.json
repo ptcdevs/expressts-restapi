@@ -1,0 +1,23 @@
+{
+  "name": "expressts-restapi",
+  "version": "0.1.0",
+  "description": "demo/ref project for express.js in typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"TBA\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ptcdevs/expressts-restapi.git"
+  },
+  "author": "David Gallmeier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ptcdevs/expressts-restapi/issues"
+  },
+  "homepage": "https://github.com/ptcdevs/expressts-restapi#readme",
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2"
+  }
+}
