@@ -1,0 +1,7 @@
+.github
+.env
+docker-compose.yaml
+Makefile
+README.md
+node_modules
+dist
