@@ -4,6 +4,9 @@
   "description": "demo/ref project for express.js in typescript",
   "main": "index.js",
   "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
     "test": "echo \"TBA\" && exit 1"
   },
   "repository": {
@@ -23,6 +26,8 @@
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^20.2.5",
+    "concurrently": "^8.2.0",
+    "nodemon": "^2.0.22",
     "typescript": "^5.1.3"
   }
 }
