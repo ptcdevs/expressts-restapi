@@ -2,6 +2,15 @@
 
 demo/reference project for express.js typescript
 
+## Getting started
+
+* For local debug, run `npm i`, then `npm run debug`.
+    * defined by `./env`
+* For local docker, in Development mode, run `docker-compose up -d dev`.
+    * defined by `docker-compose.yaml`, `dev` target
+* For local docker, in Production mode, run `docker-compose up -d prod`.
+    * defined by `docker-compose.yaml`, `prod` target
+
 ## References
 
 Tutorials:
