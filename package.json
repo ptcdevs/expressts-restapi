@@ -1,6 +1,6 @@
 {
   "name": "expressts-restapi",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "demo/ref project for express.js in typescript",
   "main": "index.js",
   "scripts": {
