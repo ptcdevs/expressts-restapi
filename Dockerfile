@@ -8,9 +8,9 @@ RUN npm run build
 
 FROM base as dev
 ENV NODE_ENV=development
-CMD ["npm", "run", "start"]
+CMD ["node", "dist/index.js"]
 
 FROM base as prod
 RUN npm install --production
 ENV NODE_ENV=production
-CMD ["npm", "run", "start"]
+CMD ["node", "dist/index.js"]

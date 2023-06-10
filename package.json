@@ -14,7 +14,7 @@
     "url": "git+ssh://git@github.com/ptcdevs/expressts-restapi.git"
   },
   "author": "David Gallmeier",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ptcdevs/expressts-restapi/issues"
   },
