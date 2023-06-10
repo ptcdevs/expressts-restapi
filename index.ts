@@ -3,7 +3,7 @@ import morgan from "morgan";
 import dotenv from 'dotenv';
 import swaggerUi = require('swagger-ui-express');
 import swaggerJsdoc = require('swagger-jsdoc');
-import swaggerJSDoc, {OAS3Options, SwaggerDefinition} from "swagger-jsdoc";
+import {OAS3Options} from "swagger-jsdoc";
 
 const app: Express = express();
 dotenv.config();
@@ -21,7 +21,8 @@ const options: OAS3Options = {
       title: "Demo Express API with Swagger",
       version: process.env.npm_package_version || "0.1.0",
       description:
-        "This is a simple CRUD API application made with Express and documented with Swagger. Original example from <https://blog.logrocket.com/documenting-express-js-api-swagger/>",
+        "This is a simple CRUD API application made with Express and documented with Swagger. Original example from <https://blog.logrocket.com/documenting-express-js-api-swagger/>.\n\n" +
+        "Swagger.json at [/swagger.json](/swagger.json)",
       license: {
         name: "MIT",
         url: "https://spdx.org/licenses/MIT.html",
@@ -33,10 +34,21 @@ const options: OAS3Options = {
       },
     },
   },
-  apis: ["./index.ts"],
+  apis: ["./index.js"],
 };
 const swaggerSpec: any | object = swaggerJsdoc(options);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use(
+  '/api-docs',
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec, {
+    swaggerOptions: {
+      url: "/swagger.json"
+    }
+  }));
+app.get('/swagger.json', (req, res): void => {
+  res.setHeader('Content-Type', 'application/json')
+  res.send(swaggerSpec)
+})
 
 /**
  * @openapi
@@ -57,6 +69,7 @@ app.get('/hello', async function (req: Request, res: Response) {
   let name = req.query.name || "anonymous";
   res.send(`Hello, ${name}!`)
 })
+
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${port}`);

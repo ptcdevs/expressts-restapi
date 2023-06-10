@@ -7,7 +7,8 @@
     "build": "npx tsc",
     "start": "node dist/index.js",
     "dev": "node_modules/.bin/concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
-    "test": "echo \"TBA\" && exit 1"
+    "test": "echo \"TBA\" && exit 1",
+    "swagger": "tsoa spec"
   },
   "repository": {
     "type": "git",
