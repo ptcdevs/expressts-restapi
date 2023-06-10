@@ -34,7 +34,7 @@ const options: OAS3Options = {
       },
     },
   },
-  apis: ["./index.js"],
+  apis: ["./index.ts"],
 };
 const swaggerSpec: any | object = swaggerJsdoc(options);
 app.use(
@@ -72,5 +72,5 @@ app.get('/hello', async function (req: Request, res: Response) {
 
 
 app.listen(port, () => {
-  console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
+  console.log(`⚡️[server]: Server is running at http://localhost:${port}/api-docs`);
 });
