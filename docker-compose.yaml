@@ -1,0 +1,15 @@
+services:
+  dev:
+    build:
+      context: ./
+      target: dev
+    ports:
+      - 3000:3000
+    environment:
+      PORT: 3000
+  prod:
+    build:
+      context: ./
+      target: prod
+    ports:
+      - 3000:3000

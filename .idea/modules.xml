@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/expressts-restapi.iml" filepath="$PROJECT_DIR$/.idea/expressts-restapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../expressjs-restapi/.idea/react-restapi.iml" filepath="$PROJECT_DIR$/../expressjs-restapi/.idea/react-restapi.iml" />
     </modules>
   </component>
 </project>
