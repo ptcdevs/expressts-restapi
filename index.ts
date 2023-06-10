@@ -45,7 +45,7 @@ app.use(
       url: "/swagger.json"
     }
   }));
-app.get('/swagger.json', (req, res): void => {
+app.get('/swagger.json', (req: Request, res: Response): void => {
   res.setHeader('Content-Type', 'application/json')
   res.send(swaggerSpec)
 })
